@@ -1,27 +1,53 @@
-# Plugins
-gems:             ['jekyll-paginate', 'jekyll-gist', 'jekyll-github-metadata']
+# Jekyll configuration
 
-# Dependencies
-highlighter:      rouge
+name: Blog Name
+description: Software Developer
 
-# Permalinks
-permalink:        pretty
+# Url is currently only used only for the RSS feed in feed.xml
+url: http://streetturtle.github.io
+#url: http://localhost:4000
 
-# Setup
-title:            BlackDoc
-tagline:          Black Theme for Jekyll
-description:      "A two-column black theme with a scrolling sidebar. Ideal for sites requiring a master-detail layout, e.g. documentation, cheatsheets, lyrics, notes..."
-url:              https://github.com/karloespiritu/blackdoc
-baseurl:          /
+# For a project page here should be a project name. Otherwise (for user's/organizaion's page leave it empty)
+baseurl: '/jekyll-clean-dark'
 
-author:
-  name:           'Karlo Espiritu'
-  url:            https://twitter.com/karloespiritu
+share:
+  facebook: true
+  twitter: true
+  gplus: true
+  linkedin: true
+  pinterest: true
+  email: true
 
-paginate:         5
+social:
+  github: streetturtle
+  stackoverflow: ''
+  linkedin:
+  instagram: ''
+  lastfm: ''
+  rss: feed.xml
 
-# Custom vars
-version:          1.0.1
+# Google Analytics key, leave blank to ignore
+google_analytics_key:
+# Yandex metrica (https://metrica.yandex.com/) leave blank to ignore or put true to use
+yandex_metrica:
 
-github:
-  repo:           https://github.com/karloespiritu/blackdoc
+
+# Set this to your disqus shortname to enable comments. Note that the 'comments'
+# setting below must also be true. Individual posts can override 'comments' to
+# disable on a post-by-post basis
+disqus: streetturtle
+comments: false
+
+permalink: /:year/:month/:title
+
+# Enable for using pages, more details are here: http://jekyllrb.com/docs/pagination/
+#paginate: 3
+
+#highlighter: rouge
+
+markdown: kramdown
+kramdown:
+  input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
+  hard_wrap: true
+
+exclude: ['README.md', 'LICENSE']
